@@ -1,0 +1,28 @@
+ @import url("https://blokkfont-losgordos.netdna-ssl.com/v2/blokkfont.css");
+
+.hicon{
+  font-size: 1.2em;  
+}
+
+.blokk{
+  font-family: "BLOKK";
+}
+
+.ui.card{
+  display: inline-block;
+  margin: 0 13px;
+}
+
+.ui.card > .image > img{
+    height: 200px;
+}
+
+.ui.centered.image{
+    margin: auto;
+    height: 330px;
+    width:  auto;
+}
+
+#delete{
+    display: inline;
+}

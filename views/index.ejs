@@ -1,0 +1,32 @@
+<% include partials/header %>
+    <h1 class="ui center aligned icon header">
+    <i class="circular indent icon"></i>
+    Blogs
+    </h1>
+
+    <% blogs.forEach(function(blog){    %>
+        <div class="ui card">
+         <div class="image">
+        <img src = "<%= blog.image %>">
+          </div>
+          <div class="content">
+            <a class="header" href = "/blogs/<%= blog._id %>"><%= blog.title %></a>
+            <div class="meta">
+              <span class="date"><%= blog.created.toDateString() %></span>
+            </div>
+            <div class="description">
+              <%- blog.body.substring(0,200) %>...
+            </div>
+            <a href = "/blogs/<%= blog._id %>">
+            <div class="ui animated inverted violet button" tabindex="0">
+               <div class="visible content">Read More  <i class = "right chevron icon"></i></div>
+               <div class="hidden content">
+                 <i class="right arrow icon"></i>
+               </div>
+            </div>
+            </a>
+          </div>
+          </div>
+    <%  });     %>
+
+<% include partials/footer %>
